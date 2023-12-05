@@ -1,4 +1,13 @@
-export const snakesData = [
+export interface snakesData {
+  Id: number;
+  MMName: string;
+  EngName?: string;
+  Detail: string;
+  IsPoison: string;
+  IsDanger: string;
+}
+
+export const snakesData: snakesData[] = [
   {
     Id: 1,
     MMName: "တောကြီးမြွေဟောက် /ငန်းပုတ်",
@@ -193,6 +202,7 @@ export const snakesData = [
     Detail:
       "Banded wolf snake-Lycodon fasciatusမျိုးစိတ်/ ဒီမြွေတွေက အိမ်တွေမှာတွေ့ရများတာကြောင့် အိမ်စောင့်​မြွေလို့ခေါ်တာပါ။ အိမ်မြှောင်တွေကိုသာအစားများပြီး လူအတွက်အန္တရာယ်လုံးဝမရှိပါဘူး",
     IsPoison: "No",
+    IsDanger: "No",
   },
   {
     Id: 23,

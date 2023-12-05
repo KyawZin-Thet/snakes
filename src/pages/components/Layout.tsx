@@ -11,8 +11,8 @@ export default function Layout({ children }: Props) {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        p: 3,
         bgcolor: "primary.main",
+        borderBottom: "1px",
       }}
     >
       <TopBar />

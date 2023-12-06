@@ -37,10 +37,18 @@ export default function TopBar() {
           bgcolor: "primary.main",
         }}
       >
-        <Image src={"/greenSnake.png"} alt="logo" width={45} height={45} />
-        <Typography variant="body2" textAlign={"center"} color={"info.main"}>
-          Kyaw Zin Thet
-        </Typography>
+        <Image
+          src={"/greenSnake.png"}
+          style={{ borderRadius: "50%" }}
+          alt="logo"
+          width={55}
+          height={55}
+        />
+        {id && (
+          <Typography variant="body2" textAlign={"center"} color={"info.main"}>
+            Kyaw Zin Thet
+          </Typography>
+        )}
         {id ? (
           <Button onClick={() => router.push("/")}>
             <HomeIcon sx={{ color: "info.main", fontSize: 40 }} />
@@ -54,6 +62,7 @@ export default function TopBar() {
               width: "500px",
               input: { color: "info.main" },
               mb: 1,
+              ml: 4,
             }}
             placeholder="Search.."
             onChange={(evt) => handleSearch(evt.target.value)}

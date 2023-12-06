@@ -18,7 +18,12 @@ export default function Home({ Id, MMName, EngName }: Props) {
           onMouseOver={() => setSlideValue(true)}
           onMouseOut={() => setSlideValue(false)}
           elevation={3}
-          sx={{ maxWidth: 345, m: 3, borderRadius: "5px" }}
+          sx={{
+            width: { xs: "300px", sm: "345px" },
+            m: 3,
+            borderRadius: "30px",
+            userSelect: "none",
+          }}
         >
           <Box position={"relative"}>
             <CardMedia
@@ -28,7 +33,7 @@ export default function Home({ Id, MMName, EngName }: Props) {
               alt={EngName}
               sx={{
                 "&:hover": {
-                  filter: " blur(8px)",
+                  filter: " blur(5px)",
                 },
               }}
             />

@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import snakeReducer from "./slices/snakeSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    snakes: snakeReducer,
+  },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

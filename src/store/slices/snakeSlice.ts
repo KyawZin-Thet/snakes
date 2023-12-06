@@ -1,12 +1,13 @@
+import { snakesData } from "@/utils/data";
 import { createSlice } from "@reduxjs/toolkit";
 
-// interface CartState {
-//   isLoading: boolean;
-//   items: CartItem[];
-//   error: Error | null;
-// }
+interface initialState {
+  isLoading: boolean;
+  items: snakesData[];
+  error: Error | null;
+}
 
-const initialState = {
+const initialState: initialState = {
   isLoading: false,
   items: [],
   error: null,
@@ -15,9 +16,13 @@ const initialState = {
 export const snakeSlice = createSlice({
   name: "snake",
   initialState,
-  reducers: {},
+  reducers: {
+    setSnakes: (state, action) => {
+      state.items = action.payload;
+    },
+  },
 });
 
-export const {} = snakeSlice.actions;
+export const { setSnakes } = snakeSlice.actions;
 
 export default snakeSlice.reducer;

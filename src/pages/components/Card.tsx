@@ -18,7 +18,7 @@ export default function Home({ Id, MMName, EngName }: Props) {
           onMouseOver={() => setSlideValue(true)}
           onMouseOut={() => setSlideValue(false)}
           elevation={3}
-          sx={{ maxWidth: 345, m: 3 }}
+          sx={{ maxWidth: 345, m: 3, borderRadius: "5px" }}
         >
           <Box position={"relative"}>
             <CardMedia

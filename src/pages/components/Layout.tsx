@@ -19,6 +19,7 @@ export default function Layout({ children }: Props) {
     >
       <TopBar />
       {children}
+
       <Link
         style={{
           textDecoration: "none",

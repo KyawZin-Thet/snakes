@@ -2,7 +2,7 @@ import { useAppDispatch } from "@/store/hooks";
 import { setSnakes } from "@/store/slices/snakeSlice";
 import { snakesData } from "@/utils/data";
 import HomeIcon from "@mui/icons-material/Home";
-import { Box, Button, Divider, TextField } from "@mui/material";
+import { Box, Button, Divider, TextField, Typography } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
@@ -38,7 +38,9 @@ export default function TopBar() {
         }}
       >
         <Image src={"/greenSnake.png"} alt="logo" width={45} height={45} />
-
+        <Typography variant="body2" textAlign={"center"} color={"info.main"}>
+          Kyaw Zin Thet
+        </Typography>
         {id ? (
           <Button onClick={() => router.push("/")}>
             <HomeIcon sx={{ color: "info.main", fontSize: 40 }} />
